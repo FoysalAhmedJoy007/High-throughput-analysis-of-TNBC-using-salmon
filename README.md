@@ -1,5 +1,30 @@
-# High-throughput-analysis-of-TNBC-using-salmon
+# High Throughput analysis of TNBC using Salmon
 
-# Quick Start
-  conda env create -f environment.yml
-  conda activate salmon-rnaseq
+## Overview
+
+This repository contains a **publication-ready RNA-seq quantification pipeline** built around **[Salmon](https://combine-lab.github.io/salmon/)** for lightweight and accurate transcript quantification.  
+It automates the full workflow from **SRA download ? FASTQ generation ? Transcript quantification (Salmon)**, followed by **R-based downstream analysis** (DESeq2, functional enrichment, and visualization). The pipeline is designed for **reproducibility**, **modularity**, and **high-performance computing environments**, with detailed timing logs for benchmarking.
+
+
+## Features
+
+- Fully automated and parallelized
+- Ready for downstream DESeq2 analysis in R
+- Conda-based reproducible environment via `environment.yml`
+- Organized directory structure for clarity and reproducibility 
+
+
+# Create a directory to store your references
+mkdir -p ~/references/hg38
+cd ~/references/hg38
+
+
+
+## Quick Start
+
+```bash
+conda env create -f environment.yml
+conda activate salmon-rnaseq
+```
+
+[![DOI](https://zenodo.org/badge/1069523566.svg)](https://doi.org/10.5281/zenodo.17337967)
