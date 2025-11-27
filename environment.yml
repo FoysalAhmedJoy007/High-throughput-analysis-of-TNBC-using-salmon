@@ -5,12 +5,21 @@ channels:
   - defaults
 
 dependencies:
-  # Python pin (critical for solver compatibility)
-  - python=3.10.0
+  # Core interpreter — the key to avoiding all MultiQC/tiktoken conflicts
+  - python=3.10.13
 
-  # Core RNA-seq tools
-  - salmon
-  - fastq-dl
-  - fastqc
-  - multiqc
+  # Core RNA-seq tools (version-locked)
+  - salmon=1.10.1
+  - fastq-dl=1.1.1
+  - fastqc=0.12.1
+  - multiqc=1.14
+
+  # Dependencies used by these tools
+  - pandas=2.2.2
+  - numpy=1.26.4
+  - matplotlib=3.8.4
+
+  # Utility layer
+  - pip=24.2
+
   
