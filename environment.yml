@@ -5,23 +5,16 @@ channels:
   - defaults
 
 dependencies:
-  # Core interpreter — the key to avoiding all MultiQC/tiktoken conflicts
   - python=3.10.13
-
-  # Core RNA-seq tools (version-locked)
   - salmon=1.10.1
-  - fastq-dl=1.1.1
   - fastqc=0.12.1
-  - multiqc=1.14
+  - multiqc  # REMOVE – keep placeholder for pip step
+  - samtools=1.18
+  - pip       # ensure pip exists
 
-  # Dependencies used by these tools
-  - pandas=2.2.2
-  - numpy=1.26.4
-  - matplotlib=3.8.4
+  # Remove problematic tools from conda (fastq-dl, multiqc)
+  # They will be installed via pip instead.
 
-  # Utility layer
-  - pip=24.2
-
-    # Install MultiQC via pip to avoid conda dependency breakage
   - pip:
-      - multiqc==1.14
+      - fastq-dl
+      - multiqc
