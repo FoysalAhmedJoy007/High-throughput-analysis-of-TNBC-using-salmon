@@ -22,4 +22,6 @@ dependencies:
   # Utility layer
   - pip=24.2
 
-  
+    # Install MultiQC via pip to avoid conda dependency breakage
+  - pip:
+      - multiqc==1.14
