@@ -13,11 +13,4 @@ dependencies:
   - fastq-dl
   - fastqc
   - multiqc
-
-  # Useful essentials
-  - pandas
-  - numpy
-  - matplotlib
-  - pip
-
   
