@@ -6,7 +6,7 @@ channels:
 
 dependencies:
   # Python pin (critical for solver compatibility)
-  - python=3.10
+  - python=3.10.0
 
   # Core RNA-seq tools
   - salmon
