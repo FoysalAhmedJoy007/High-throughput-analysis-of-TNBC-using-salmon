@@ -1,0 +1,13 @@
+name: salmon-rnaseq
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Core tools
+  - fastq-dl         # Download FASTQ files from SRA or ENA repositories.
+  - salmon           # transcript quantification
+  - fastqc           # optional QC
+  - multiqc          # summary reports
+  
